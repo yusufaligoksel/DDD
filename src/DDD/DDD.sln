@@ -25,6 +25,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingB
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EventBus", "EventBus", "{1A795BE9-3659-4605-A98F-13A2891FD0DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.CrossCuttingConcerns", "Identity.CrossCuttingConcerns\Identity.CrossCuttingConcerns.csproj", "{7172FA22-4646-478D-8E2C-C95EF07CEC21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{D162D3D7-5301-476E-BD1E-327CB4DA9BAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D162D3D7-5301-476E-BD1E-327CB4DA9BAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D162D3D7-5301-476E-BD1E-327CB4DA9BAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7172FA22-4646-478D-8E2C-C95EF07CEC21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7172FA22-4646-478D-8E2C-C95EF07CEC21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7172FA22-4646-478D-8E2C-C95EF07CEC21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7172FA22-4646-478D-8E2C-C95EF07CEC21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +69,7 @@ Global
 		{61477FBA-1222-4462-A114-6BE8D5505782} = {161BCC63-3699-4CCA-A58F-23E187AA0874}
 		{D162D3D7-5301-476E-BD1E-327CB4DA9BAC} = {161BCC63-3699-4CCA-A58F-23E187AA0874}
 		{1A795BE9-3659-4605-A98F-13A2891FD0DC} = {005D4EC2-6376-45A2-971E-BC34C4805F7B}
+		{7172FA22-4646-478D-8E2C-C95EF07CEC21} = {161BCC63-3699-4CCA-A58F-23E187AA0874}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F337E5D7-C460-4F36-9A93-562E77EFADAB}

@@ -8,6 +8,7 @@
     <Folder Include="Features\Commands\User\" />
     <Folder Include="Features\Queries\User\" />
     <Folder Include="Infrastructure\AutoMapper\" />
+    <Folder Include="CrossCuttingConcerns\" />
   </ItemGroup>
 
 </Project>
