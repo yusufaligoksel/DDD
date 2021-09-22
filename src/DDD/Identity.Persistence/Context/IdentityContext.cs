@@ -9,8 +9,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Identity.Persistence.Context
 {
-    public class IdentityContext:DbContext
+    public class IdentityContext : DbContext
     {
+        public IdentityContext(DbContextOptions<IdentityContext> contextOptions) : base(contextOptions)
+        {
+
+        }
+
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<UserRole> UserRoles { get; set; }
@@ -22,6 +27,8 @@ namespace Identity.Persistence.Context
             modelBuilder.ApplyConfiguration(new RoleConfiguration());
             modelBuilder.ApplyConfiguration(new UserRoleConfiguration());
             modelBuilder.ApplyConfiguration(new UserRefreshTokenConfiguration());
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

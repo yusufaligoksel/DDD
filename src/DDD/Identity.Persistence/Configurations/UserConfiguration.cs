@@ -44,13 +44,13 @@ namespace Identity.Persistence.Configurations
                 .IsRequired();
             
             builder.Property(e => e.BirthDay)
-                .HasColumnType("datetime");
+                .HasColumnType("date");
             
             builder.Property(e => e.CreatedDate)
-                .HasColumnType("datetime");
+                .HasColumnType("date");
             
             builder.Property(e => e.ModifiedDate)
-                .HasColumnType("datetime");
+                .HasColumnType("date");
             
             builder.Property(e => e.UserStatus)
                 .IsRequired()

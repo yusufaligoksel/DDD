@@ -5,9 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Repository\" />
     <Folder Include="Services\Abstract\" />
     <Folder Include="Services\Concrete\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Identity.Persistence\Identity.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

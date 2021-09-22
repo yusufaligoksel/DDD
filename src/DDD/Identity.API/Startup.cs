@@ -11,6 +11,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Identity.Persistence.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace Identity.API
 {
@@ -32,6 +34,12 @@ namespace Identity.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Identity.API", Version = "v1" });
             });
+            
+            services.AddEntityFrameworkNpgsql().AddDbContext<IdentityContext>(
+                options => { options.UseNpgsql(Configuration.GetConnectionString("PostgreDatabase")); },
+                ServiceLifetime.Transient);
+
+            services.AddScoped<DbContext>(provider => provider.GetService<IdentityContext>());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
