@@ -64,16 +64,18 @@ namespace Identity.Infrastructure.Repository
             return await _entities.Where(filter).ToListAsync();
         }
 
-        public void Insert(TEntity entity)
+        public TEntity Insert(TEntity entity)
         {
             _entities.Add(entity);
             _context.SaveChanges();
+            return entity;
         }
 
-        public async void InsertAsync(TEntity entity)
+        public async Task<TEntity> InsertAsync(TEntity entity)
         {
             await _entities.AddAsync(entity);
             await _context.SaveChangesAsync();
+            return entity;
         }
 
         public void Insert(IEnumerable<TEntity> entities)
@@ -82,19 +84,26 @@ namespace Identity.Infrastructure.Repository
             _context.SaveChangesAsync();
         }
 
-        public void Update(TEntity entity)
+        public TEntity Update(TEntity entity)
         {
             _entities.Update(entity);
             _context.SaveChanges();
+            return entity;
         }
 
-        public void UpdateAsync(TEntity entity)
+        public async Task<TEntity> UpdateAsync(TEntity entity)
         {
-            Task.Run(() =>
+            _entities.Attach(entity);
+            _context.Entry(entity).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return entity;
+            
+            /*Task.Run(() =>
             {
                 _entities.Update(entity);
                 _context.SaveChangesAsync();
-            });
+                return entity;
+            });*/
         }
 
         public void Update(IEnumerable<TEntity> entities)

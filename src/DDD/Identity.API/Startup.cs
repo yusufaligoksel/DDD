@@ -11,6 +11,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Identity.Infrastructure.Repository;
+using Identity.Infrastructure.Services.Abstract;
+using Identity.Infrastructure.Services.Concrete;
 using Identity.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 
@@ -40,6 +43,15 @@ namespace Identity.API
                 ServiceLifetime.Transient);
 
             services.AddScoped<DbContext>(provider => provider.GetService<IdentityContext>());
+
+            #region ServiceInjection
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped(typeof(IBaseService<>), typeof(BaseService<>));
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IRoleService, RoleService>();
+            services.AddScoped<IUserRoleService, UserRoleService>();
+            services.AddScoped<IUserRefreshTokenService,UserRefreshTokenService>();
+            #endregion
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

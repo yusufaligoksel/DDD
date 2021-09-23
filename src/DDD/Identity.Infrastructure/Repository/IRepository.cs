@@ -25,16 +25,16 @@ namespace Identity.Infrastructure.Repository
         /// Veri/Verileri Kaydetme
         /// </summary>
         /// <param name="entity"></param>
-        void Insert(TEntity entity);
-        void InsertAsync(TEntity entity);
+        TEntity Insert(TEntity entity);
+        Task<TEntity> InsertAsync(TEntity entity);
         void Insert(IEnumerable<TEntity> entities);
 
         /// <summary>
         /// Veri/Verileri Güncelleme
         /// </summary>
         /// <param name="entity"></param>
-        void Update(TEntity entity);
-        void UpdateAsync(TEntity entity);
+        TEntity Update(TEntity entity);
+        Task<TEntity> UpdateAsync(TEntity entity);
         void Update(IEnumerable<TEntity> entities);
 
         /// <summary>
