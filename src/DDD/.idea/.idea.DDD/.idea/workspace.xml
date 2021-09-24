@@ -6,19 +6,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ea0796f-8a23-4300-913c-49d047f895b6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Abstract/IRoleService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Abstract/IUserRefreshTokenService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Abstract/IUserRoleService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Abstract/IUserService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/RoleService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/UserRefreshTokenService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/UserRoleService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/UserService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Identity.Application/Features/User/Commands/ChangePasswordCommand/ChangePasswordCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Identity.Application/Features/User/Commands/ChangePasswordCommand/ChangePasswordCommandValidator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Identity.Application/Features/User/Commands/DeleteUserCommand/DeleteUserCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Identity.Application/Features/User/Commands/DeleteUserCommand/DeleteUserCommandValidator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Identity.Application/Features/User/Commands/LoginCommand/LoginCommandValidator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Identity.Application/Features/User/Commands/RegisterCommand/RegisterCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Identity.Application/Features/User/Commands/RegisterCommand/RegisterCommandValidator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Identity.Application/Features/User/Commands/UpdateUserCommand/UpdateUserCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Identity.Application/Features/User/Commands/UpdateUserCommand/UpdateUserCommandValidator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Identity.Application/Features/User/Queries/GetUser/GetUserQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Identity.Application/Features/User/Queries/GetUsers/GetUsersQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Abstract/ITokenService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/TokenService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DDD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DDD/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.Infrastructure/Repository/IRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Infrastructure/Repository/IRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.Infrastructure/Repository/Repository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Infrastructure/Repository/Repository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.Infrastructure/Services/Abstract/IBaseService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Abstract/IBaseService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/BaseService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/BaseService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Identity.Application/Identity.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Application/Identity.Application.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +91,8 @@
       <workItem from="1632324367575" duration="6701000" />
       <workItem from="1632345467777" duration="2164000" />
       <workItem from="1632379452284" duration="600000" />
-      <workItem from="1632411164161" duration="2900000" />
+      <workItem from="1632411164161" duration="3151000" />
+      <workItem from="1632464551082" duration="2152000" />
     </task>
     <servers />
   </component>

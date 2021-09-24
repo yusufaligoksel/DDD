@@ -5,8 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Commands\User\" />
-    <Folder Include="Features\Queries\User\" />
+    <Folder Include="Features\Role\Commands" />
+    <Folder Include="Features\Role\Queries" />
+    <Folder Include="Features\UserRole\Commands" />
+    <Folder Include="Features\UserRole\Queries" />
     <Folder Include="Infrastructure\AutoMapper\" />
   </ItemGroup>
 
