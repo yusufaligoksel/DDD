@@ -5,11 +5,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Features\Auth\Queries" />
     <Folder Include="Features\Role\Commands" />
     <Folder Include="Features\Role\Queries" />
     <Folder Include="Features\UserRole\Commands" />
     <Folder Include="Features\UserRole\Queries" />
     <Folder Include="Infrastructure\AutoMapper\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Identity.Domain\Identity.Domain.csproj" />
+    <ProjectReference Include="..\Identity.Infrastructure\Identity.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

@@ -8,6 +8,7 @@
     <Folder Include="Enums\" />
     <Folder Include="Dto\" />
     <Folder Include="Events\" />
+    <Folder Include="Settings" />
   </ItemGroup>
 
 </Project>
