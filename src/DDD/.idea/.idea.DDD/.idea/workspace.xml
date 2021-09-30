@@ -6,26 +6,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ea0796f-8a23-4300-913c-49d047f895b6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Identity.Application/Features/Auth/Commands/LoginCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Identity.Domain/Dto/ClientTokenDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Identity.Domain/Dto/UserTokenDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Identity.Domain/Entities/Client.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Identity.Domain/Request/LoginRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Identity.Domain/Response/ErrorResult.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Identity.Domain/Response/GenericResult.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Abstract/IAuthService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/AuthService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DDD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DDD/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DDD.sln" beforeDir="false" afterPath="$PROJECT_DIR$/DDD.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.API/Identity.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.API/Identity.API.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.API/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.Application/Identity.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Application/Identity.Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.Domain/Identity.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Domain/Identity.Domain.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.Infrastructure/Services/Abstract/ITokenService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Abstract/ITokenService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.Infrastructure/Services/Abstract/IUserRefreshTokenService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Abstract/IUserRefreshTokenService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.Infrastructure/Services/Abstract/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Abstract/IUserService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/UserRefreshTokenService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/UserRefreshTokenService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/UserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Identity.Domain/Response/ErrorResult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Domain/Response/ErrorResult.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Identity.Domain/Response/GenericResult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Domain/Response/GenericResult.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/AuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/AuthService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +83,8 @@
       <workItem from="1632411164161" duration="3151000" />
       <workItem from="1632464551082" duration="2747000" />
       <workItem from="1632938899881" duration="2521000" />
-      <workItem from="1632951331432" duration="3188000" />
+      <workItem from="1632951331432" duration="3365000" />
+      <workItem from="1632984791822" duration="1938000" />
     </task>
     <servers />
   </component>

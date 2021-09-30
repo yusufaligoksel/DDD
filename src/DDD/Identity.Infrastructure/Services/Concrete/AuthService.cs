@@ -29,7 +29,8 @@ namespace Identity.Infrastructure.Services.Concrete
             var user = await _userService.FindUserByEmailAsync(request.Email);
             if (user==null)
             {
-                //todo:Hata mesajı dönülecek
+                ErrorResult error = new("Email veya şifre hatalıdır.");
+                return GenericResult<UserTokenDto>.ErrorResponse(error, statusCode: 400);
             }
 
             var result = new GenericResult<UserTokenDto>();
