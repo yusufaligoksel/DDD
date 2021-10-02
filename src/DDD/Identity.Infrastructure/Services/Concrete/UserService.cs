@@ -26,5 +26,10 @@ namespace Identity.Infrastructure.Services.Concrete
         {
             return _password.VerifyHashedPassword(password, user.PasswordHash);
         }
+        
+        public async Task<bool> CheckUser(string email)
+        {
+            return await _repository.Table.AnyAsync(x => x.Email == email);
+        }
     }
 }

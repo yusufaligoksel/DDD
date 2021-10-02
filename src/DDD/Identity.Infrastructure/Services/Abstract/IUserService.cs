@@ -7,5 +7,6 @@ namespace Identity.Infrastructure.Services.Abstract
     {
         Task<User> FindUserByEmailAsync(string email);
         bool CheckPassword(User user, string password);
+        Task<bool> CheckUser(string email);
     }
 }

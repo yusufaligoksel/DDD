@@ -5,37 +5,23 @@
     <projectFile profileName="Identity.API">Identity.API/Identity.API.csproj</projectFile>
     <projectFile profileName="IIS Express">Customer.Api/Customer.Api.csproj</projectFile>
     <projectFile profileName="Customer.Api">Customer.Api/Customer.Api.csproj</projectFile>
+    <projectFile profileName="IIS Express">Customer.API/Customer.API.csproj</projectFile>
+    <projectFile profileName="Customer.API">Customer.API/Customer.API.csproj</projectFile>
+    <projectFile profileName="IIS Express">Management.API/Management.API.csproj</projectFile>
+    <projectFile profileName="Management.API">Management.API/Management.API.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ea0796f-8a23-4300-913c-49d047f895b6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Identity.Domain/Request/ClientTokenRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Identity.Domain/Settings/TokenOption.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Abstract/IPasswordService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/PasswordService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/SignService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Identity.API/Controllers/AuthController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Identity.API/Controllers/UserController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Identity.Domain/Dto/UserDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DDD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DDD/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DDD.sln" beforeDir="false" afterPath="$PROJECT_DIR$/DDD.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.API/Identity.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.API/Identity.API.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Identity.API/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.API/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.API/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.API/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.API/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.Domain/Entities/Role.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Domain/Entities/Role.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.Domain/Entities/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Domain/Entities/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.Domain/Entities/UserRefreshToken.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Domain/Entities/UserRefreshToken.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.Domain/Entities/UserRole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Domain/Entities/UserRole.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.Domain/Identity.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Domain/Identity.Domain.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.Infrastructure/Identity.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Infrastructure/Identity.Infrastructure.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.Infrastructure/Repository/IRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Infrastructure/Repository/IRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.Infrastructure/Repository/Repository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Infrastructure/Repository/Repository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.Infrastructure/Services/Abstract/IAuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Abstract/IAuthService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.Infrastructure/Services/Abstract/IBaseService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Abstract/IBaseService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.Infrastructure/Services/Abstract/ITokenService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Abstract/ITokenService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.Infrastructure/Services/Abstract/IUserRoleService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Abstract/IUserRoleService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Identity.Application/Features/Auth/Commands/LoginCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Application/Features/Auth/Commands/LoginCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Identity.Application/Features/User/Commands/RegisterCommand/RegisterCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Application/Features/User/Commands/RegisterCommand/RegisterCommand.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Identity.Infrastructure/Services/Abstract/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Abstract/IUserService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/AuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/AuthService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/BaseService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/BaseService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/TokenService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/TokenService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/UserRoleService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/UserRoleService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/UserService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +34,14 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ed92340b5670447ab78a69a564a858d31bfb88/74/DbSet.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/61f5185be9cf48b98487181d7861eb9c8f5378/1B2/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6f1631d82a7f48d9bc4be4dc1db9c4cf1bbb78/170/ControllerFactoryProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/61f5185be9cf48b98487181d7861eb9c8f5378/1D5/TaskContinuation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/61f5185be9cf48b98487181d7861eb9c8f5378/1D0/Task.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6f1631d82a7f48d9bc4be4dc1db9c4cf1bbb78/11A/ControllerActionInvoker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/61f5185be9cf48b98487181d7861eb9c8f5378/2C4/AsyncValueTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Immediate Window" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/61f5185be9cf48b98487181d7861eb9c8f5378/2C2/AsyncTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1yV6M7wiuzgYxxXfoXYoAPhlqu4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -58,6 +52,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -155,6 +151,36 @@
         <option name="Build" />
       </method>
     </configuration>
+    <configuration name="Management.API" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Management.API/Management.API.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value="net5.0" />
+      <option name="LAUNCH_PROFILE_NAME" value="Management.API" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="Management.API: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Management.API/Management.API.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value="net5.0" />
+      <option name="LAUNCH_PROFILE_NAME" value="IIS Express" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -172,7 +198,8 @@
       <workItem from="1632938899881" duration="2521000" />
       <workItem from="1632951331432" duration="3365000" />
       <workItem from="1632984791822" duration="1938000" />
-      <workItem from="1633127473946" duration="5547000" />
+      <workItem from="1633127473946" duration="5818000" />
+      <workItem from="1633165932450" duration="4372000" />
     </task>
     <servers />
   </component>
@@ -196,5 +223,117 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Identity.Application/Features/User/Commands/RegisterCommand/RegisterCommand.cs</url>
+          <line>44</line>
+          <properties documentPath="C:\yusufaligoksel\DDD\src\DDD\Identity.Application\Features\User\Commands\RegisterCommand\RegisterCommand.cs" initialLine="38" containingFunctionPresentation="method 'Handle'">
+            <startOffsets>
+              <option value="1581" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1582" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Identity.Application/Features/User/Commands/RegisterCommand/RegisterCommand.cs</url>
+          <line>80</line>
+          <properties documentPath="C:\yusufaligoksel\DDD\src\DDD\Identity.Application\Features\User\Commands\RegisterCommand\RegisterCommand.cs" initialLine="69" containingFunctionPresentation="method 'Handle'">
+            <startOffsets>
+              <option value="3128" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3189" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Identity.API/Controllers/UserController.cs</url>
+          <line>21</line>
+          <properties documentPath="C:\yusufaligoksel\DDD\src\DDD\Identity.API\Controllers\UserController.cs" initialLine="19" containingFunctionPresentation="method 'Post'">
+            <startOffsets>
+              <option value="591" />
+            </startOffsets>
+            <endOffsets>
+              <option value="592" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Identity.API/Controllers/UserController.cs</url>
+          <line>23</line>
+          <properties documentPath="C:\yusufaligoksel\DDD\src\DDD\Identity.API\Controllers\UserController.cs" initialLine="21" containingFunctionPresentation="method 'Post'">
+            <startOffsets>
+              <option value="661" />
+            </startOffsets>
+            <endOffsets>
+              <option value="675" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Identity.Application/Features/Auth/Commands/LoginCommand.cs</url>
+          <line>24</line>
+          <properties documentPath="C:\yusufaligoksel\DDD\src\DDD\Identity.Application\Features\Auth\Commands\LoginCommand.cs" initialLine="24" containingFunctionPresentation="method 'Handle'">
+            <startOffsets>
+              <option value="836" />
+            </startOffsets>
+            <endOffsets>
+              <option value="837" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Identity.API/Controllers/AuthController.cs</url>
+          <line>21</line>
+          <properties documentPath="C:\yusufaligoksel\DDD\src\DDD\Identity.API\Controllers\AuthController.cs" initialLine="21" containingFunctionPresentation="method 'Login'">
+            <startOffsets>
+              <option value="595" />
+            </startOffsets>
+            <endOffsets>
+              <option value="596" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/AuthService.cs</url>
+          <line>50</line>
+          <properties documentPath="C:\yusufaligoksel\DDD\src\DDD\Identity.Infrastructure\Services\Concrete\AuthService.cs" initialLine="50" containingFunctionPresentation="method 'CreateUserTokenAsync'">
+            <startOffsets>
+              <option value="1968" />
+              <option value="2037" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2075" />
+              <option value="2073" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/AuthService.cs</url>
+          <line>52</line>
+          <properties documentPath="C:\yusufaligoksel\DDD\src\DDD\Identity.Infrastructure\Services\Concrete\AuthService.cs" initialLine="52" containingFunctionPresentation="method 'CreateUserTokenAsync'">
+            <startOffsets>
+              <option value="2128" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2129" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -22,12 +22,14 @@ namespace Identity.Infrastructure.Services.Concrete
         public AuthService(IOptions<List<Client>> clientOptions,
             ITokenService tokenService,
             IUserService userService,
-            IUserRoleService userRoleService)
+            IUserRoleService userRoleService,
+            IUserRefreshTokenService userRefreshTokenService)
         {
             _clients = clientOptions.Value;
             _tokenService = tokenService;
             _userService = userService;
             _userRoleService = userRoleService;
+            _userRefreshTokenService = userRefreshTokenService;
         }
         
         public async Task<GenericResult<UserTokenDto>> CreateUserTokenAsync(LoginRequest request)

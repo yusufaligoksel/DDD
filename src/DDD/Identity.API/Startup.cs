@@ -11,12 +11,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Identity.Application.Features.Auth.Commands;
+using Identity.Application.Features.User.Commands.RegisterCommand;
 using Identity.Domain.Entities;
 using Identity.Domain.Settings;
 using Identity.Infrastructure.Repository;
 using Identity.Infrastructure.Services.Abstract;
 using Identity.Infrastructure.Services.Concrete;
 using Identity.Persistence.Context;
+using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 
@@ -86,6 +89,13 @@ namespace Identity.API
                     ClockSkew = TimeSpan.Zero
                 };
             });
+            #endregion
+
+            #region MediatR
+            services.AddMediatR(typeof(Startup));
+            services.AddMediatR(typeof(LoginCommand));
+            services.AddMediatR(typeof(RegisterCommand));
+
             #endregion
         }
 

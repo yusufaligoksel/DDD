@@ -1,6 +1,7 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 using Identity.Domain.Dto;
+using Identity.Domain.Request;
 using Identity.Domain.Response;
 using Identity.Infrastructure.Services.Abstract;
 using MediatR;
@@ -20,9 +21,13 @@ namespace Identity.Application.Features.Auth.Commands
         {
             _authService = authService;
         }
-        public Task<GenericResult<UserTokenDto>> Handle(LoginCommand request, CancellationToken cancellationToken)
+        public async Task<GenericResult<UserTokenDto>> Handle(LoginCommand request, CancellationToken cancellationToken)
         {
-            throw new System.NotImplementedException();
+            var tokenResult = await _authService.CreateUserTokenAsync(new LoginRequest
+                { Email = request.Email, Password = request.Password });
+
+            return tokenResult;
+
         }
     }
 }

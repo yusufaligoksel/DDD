@@ -48,7 +48,7 @@ namespace Identity.Infrastructure.Services.Concrete
                 RefreshTokenExpiration = refreshTokenExpiration
             };
 
-            throw new System.NotImplementedException();
+            return tokenDto;
         }
 
         public ClientTokenDto CreateClientToken(Client client)
@@ -86,7 +86,8 @@ namespace Identity.Infrastructure.Services.Concrete
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(JwtRegisteredClaimNames.Email, user.Email),
-                new Claim(ClaimTypes.Name, user.Username),
+                new Claim(ClaimTypes.Name, user.Firstname),
+                new Claim(ClaimTypes.Surname, user.Lastname),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
 
