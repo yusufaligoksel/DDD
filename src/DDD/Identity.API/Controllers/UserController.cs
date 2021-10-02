@@ -7,9 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Identity.API.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class UserController
+    public class UserController:BaseController
     {
         private IMediator _mediator;
         public UserController(IMediator mediator)
@@ -17,11 +15,11 @@ namespace Identity.API.Controllers
             _mediator = mediator;
         }
 
-        [HttpPost]
-        public async Task<GenericResult<UserDto>> Post([FromBody] RegisterCommand command)
+        [HttpPost(Name="Register")]
+        public async Task<IActionResult> Post([FromBody] RegisterCommand command)
         {
             var result = await _mediator.Send(command);
-            return result;
+            return CreateActionResult(result, result.StatusCode);
         }
     }
 }

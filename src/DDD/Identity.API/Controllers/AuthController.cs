@@ -7,9 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Identity.API.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class AuthController
+    public class AuthController:BaseController
     {
         private readonly IMediator _mediator;
         public AuthController(IMediator mediator)
@@ -17,11 +15,11 @@ namespace Identity.API.Controllers
             _mediator = mediator;
         }
         
-        [HttpPost]
-        public async Task<GenericResult<UserTokenDto>> Login([FromBody] LoginCommand command)
+        [HttpPost(Name="Login")]
+        public async Task<IActionResult> Login([FromBody] LoginCommand command)
         {
             var result = await _mediator.Send(command);
-            return result;
+            return CreateActionResult(result, result.StatusCode);
         }
     }
 }
