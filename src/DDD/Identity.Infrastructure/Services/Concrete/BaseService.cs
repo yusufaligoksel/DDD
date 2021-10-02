@@ -69,6 +69,16 @@ namespace Identity.Infrastructure.Services.Concrete
             _repository.Update(entities);
         }
 
+        public async Task<int> DeleteAsync(object id)
+        {
+            return await _repository.DeleteAsync(id);
+        }
+
+        public async Task<int> DeleteAsync(TEntity entity)
+        {
+            return await _repository.DeleteAsync(entity);
+        }
+
         public IEnumerable<TEntity> GetSql(string sql, params object[] parameters)
         {
             return _repository.GetSql(sql, parameters);

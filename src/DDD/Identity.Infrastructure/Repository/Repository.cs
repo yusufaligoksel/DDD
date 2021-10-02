@@ -119,11 +119,11 @@ namespace Identity.Infrastructure.Repository
             _context.SaveChanges();
         }
 
-        public async void DeleteAsync(object id)
+        public async Task<int> DeleteAsync(object id)
         {
             var entity = await this.FindAsync(id);
             _entities.Remove(entity);
-            await _context.SaveChangesAsync();
+            return await _context.SaveChangesAsync();
         }
 
         public void Delete(TEntity entity)
@@ -132,10 +132,10 @@ namespace Identity.Infrastructure.Repository
             _context.SaveChanges();
         }
 
-        public async void DeleteAsync(TEntity entity)
+        public async Task<int> DeleteAsync(TEntity entity)
         {
             _entities.Remove(entity);
-            await _context.SaveChangesAsync();
+            return await _context.SaveChangesAsync();
         }
 
         public void Delete(IEnumerable<TEntity> entities)

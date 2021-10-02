@@ -42,9 +42,9 @@ namespace Identity.Infrastructure.Repository
         /// </summary>
         /// <param name="id"></param>
         void Delete(object id);
-        void DeleteAsync(object id);
+        Task<int> DeleteAsync(object id);
         void Delete(TEntity entity);
-        void DeleteAsync(TEntity entity);
+        Task<int> DeleteAsync(TEntity entity);
         void Delete(IEnumerable<TEntity> entities);
         #endregion
 

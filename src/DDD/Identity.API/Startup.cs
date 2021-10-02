@@ -11,10 +11,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Identity.Domain.Entities;
+using Identity.Domain.Settings;
 using Identity.Infrastructure.Repository;
 using Identity.Infrastructure.Services.Abstract;
 using Identity.Infrastructure.Services.Concrete;
 using Identity.Persistence.Context;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 
 namespace Identity.API
@@ -37,13 +40,20 @@ namespace Identity.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Identity.API", Version = "v1" });
             });
-            
+
+            #region Database
             services.AddEntityFrameworkNpgsql().AddDbContext<IdentityContext>(
                 options => { options.UseNpgsql(Configuration.GetConnectionString("PostgreDatabase")); },
                 ServiceLifetime.Transient);
 
             services.AddScoped<DbContext>(provider => provider.GetService<IdentityContext>());
-
+            #endregion
+            
+            #region Options
+            services.Configure<TokenOption>(Configuration.GetSection("TokenOption"));
+            services.Configure<List<Client>>(Configuration.GetSection("Clients"));
+            #endregion
+            
             #region ServiceInjection
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped(typeof(IBaseService<>), typeof(BaseService<>));
@@ -51,6 +61,31 @@ namespace Identity.API
             services.AddScoped<IRoleService, RoleService>();
             services.AddScoped<IUserRoleService, UserRoleService>();
             services.AddScoped<IUserRefreshTokenService,UserRefreshTokenService>();
+            services.AddScoped<IPasswordService,PasswordService>();
+            services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<ITokenService, TokenService>();
+            #endregion
+
+            #region Authentication
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, opts =>
+            {
+                var tokenOptions = Configuration.GetSection("TokenOption").Get<TokenOption>();
+                opts.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
+                {
+                    ValidIssuer = tokenOptions.Issuer,
+                    ValidAudience = tokenOptions.Audience[0],
+                    IssuerSigningKey = SignService.GetSymmetricSecurityKey(tokenOptions.SecurityKey),
+                    ValidateIssuerSigningKey = true,
+                    ValidateAudience = true,
+                    ValidateIssuer = true,
+                    ValidateLifetime = true,
+                    ClockSkew = TimeSpan.Zero
+                };
+            });
             #endregion
         }
 
@@ -68,6 +103,7 @@ namespace Identity.API
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

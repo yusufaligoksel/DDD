@@ -27,6 +27,10 @@ namespace Identity.Infrastructure.Services.Abstract
         Task<TEntity> UpdateAsync(TEntity entity);
         void UpdateRange(IEnumerable<TEntity> entities);
         
+        //delete
+        Task<int> DeleteAsync(object id);
+        Task<int> DeleteAsync(TEntity entity);
+        
         //sql query
         IEnumerable<TEntity> GetSql(string sql, params object[] parameters);
     }

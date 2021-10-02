@@ -13,4 +13,10 @@
     <ProjectReference Include="..\Identity.Persistence\Identity.Persistence.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.2" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="5.6.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.6.0" />
+  </ItemGroup>
+
 </Project>
