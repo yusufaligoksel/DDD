@@ -4,7 +4,7 @@ namespace Management.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]/[action]")]
-    public class BaseController:Controller
+    public class BaseController: ControllerBase
     {
         protected IActionResult CreateActionResult<T>(T response, int statusCode) where T : class
         {

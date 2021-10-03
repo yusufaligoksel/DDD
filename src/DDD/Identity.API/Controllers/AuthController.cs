@@ -21,5 +21,27 @@ namespace Identity.API.Controllers
             var result = await _mediator.Send(command);
             return CreateActionResult(result, result.StatusCode);
         }
+
+        [HttpPost(Name = "CreateUserTokenByRefreshToken")]
+        public async Task<IActionResult> CreateUserTokenByRefreshToken([FromBody] CreateUserTokenByRefreshTokenCommand command)
+        {
+            var result = await _mediator.Send(command);
+            return CreateActionResult(result, result.StatusCode);
+        }
+
+        [HttpPost(Name="createClientToken")]
+        public async Task<IActionResult> CreateClientToken([FromBody] CreateClientTokenCommand command)
+        {
+            var result = await _mediator.Send(command);
+            return CreateActionResult(result, result.StatusCode);
+        }
+
+        [HttpPost(Name = "revokeRefreshToken")]
+        public async Task<IActionResult> RevokeRefreshToken([FromBody] RevokeRefreshTokenCommand command)
+        {
+            var result = await _mediator.Send(command);
+            return CreateActionResult(result, result.StatusCode);
+        }
+
     }
 }

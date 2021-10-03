@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Management.API.Controllers
 {
+    [Authorize]
     public class DashboardController : BaseController
     {
         [Authorize(Roles = "SuperAdmin")]

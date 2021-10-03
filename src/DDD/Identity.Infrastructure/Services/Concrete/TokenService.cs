@@ -16,7 +16,6 @@ namespace Identity.Infrastructure.Services.Concrete
     public class TokenService : ITokenService
     {
         private TokenOption _tokenOption;
-
         public TokenService(IOptions<TokenOption> tokenOption)
         {
             _tokenOption = tokenOption.Value;

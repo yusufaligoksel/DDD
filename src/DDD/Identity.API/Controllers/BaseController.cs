@@ -3,7 +3,7 @@
 namespace Identity.API.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     public class BaseController:Controller
     {
         protected IActionResult CreateActionResult<T>(T response, int statusCode) where T : class

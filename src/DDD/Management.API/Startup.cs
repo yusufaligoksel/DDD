@@ -2,8 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Management.API.Infrastructure.Middlewares;
 using Management.Domain.Settings;
-using Identity.Infrastructure.Services.Concrete;
+using Management.Infrastructure.Services.Concrete;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -43,6 +44,7 @@ namespace Management.API
             }).AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, opts =>
             {
                 var tokenOptions = Configuration.GetSection("TokenOption").Get<TokenOption>();
+                //opts.SaveToken = true;
                 opts.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
                 {
                     ValidIssuer = tokenOptions.Issuer,
@@ -71,11 +73,12 @@ namespace Management.API
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            
             app.UseAuthentication();
             app.UseAuthorization();
-
+            app.UseMiddleware<UserMiddleware>();
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+            
         }
     }
 }

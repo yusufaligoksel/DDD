@@ -52,20 +52,20 @@ namespace Identity.API
 
             services.AddScoped<DbContext>(provider => provider.GetService<IdentityContext>());
             #endregion
-            
+
             #region Options
             services.Configure<TokenOption>(Configuration.GetSection("TokenOption"));
             services.Configure<List<Client>>(Configuration.GetSection("Clients"));
             #endregion
-            
+
             #region ServiceInjection
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped(typeof(IBaseService<>), typeof(BaseService<>));
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IRoleService, RoleService>();
             services.AddScoped<IUserRoleService, UserRoleService>();
-            services.AddScoped<IUserRefreshTokenService,UserRefreshTokenService>();
-            services.AddScoped<IPasswordService,PasswordService>();
+            services.AddScoped<IUserRefreshTokenService, UserRefreshTokenService>();
+            services.AddScoped<IPasswordService, PasswordService>();
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<ITokenService, TokenService>();
             #endregion
@@ -96,7 +96,9 @@ namespace Identity.API
             services.AddMediatR(typeof(Startup));
             services.AddMediatR(typeof(LoginCommand));
             services.AddMediatR(typeof(RegisterCommand));
-
+            services.AddMediatR(typeof(CreateClientTokenCommand));
+            services.AddMediatR(typeof(CreateUserTokenByRefreshTokenCommand));
+            services.AddMediatR(typeof(RevokeRefreshTokenCommand));
             #endregion
         }
 
