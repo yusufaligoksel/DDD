@@ -12,17 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ea0796f-8a23-4300-913c-49d047f895b6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Identity.Application/Features/Auth/Commands/CreateClientTokenCommand.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DDD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DDD/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.API/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.API/Controllers/AuthController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.API/Controllers/BaseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.API/Controllers/BaseController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.API/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.API/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.Domain/Entities/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Domain/Entities/Client.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/SignService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/SignService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/TokenService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/TokenService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Management.API/Controllers/DashboardController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Management.API/Controllers/DashboardController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Management.API/Management.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Management.API/Management.API.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Management.API/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Management.API/Startup.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +35,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a9771b1b90284496853fbbe4cedf5e2a3e00/3/SwaggerMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/61f5185be9cf48b98487181d7861eb9c8f5378/2C2/AsyncTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/75774f4981194aa8969e00bb9a444148cf78/3/AuthorizationMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/912b6494a7384484bb988e92a17ddb861bf178/90/HttpProtocol.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/912b6494a7384484bb988e92a17ddb861bf178/90/HttpProtocol.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/61f5185be9cf48b98487181d7861eb9c8f5378/1B2/ExecutionContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/61f5185be9cf48b98487181d7861eb9c8f5378/1D5/TaskContinuation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/61f5185be9cf48b98487181d7861eb9c8f5378/233/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
@@ -56,7 +46,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3834795bf41b4e628161509eca0f58228200/3/Mediator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3834795bf41b4e628161509eca0f58228200/F/RequestHandlerWrapper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6f1631d82a7f48d9bc4be4dc1db9c4cf1bbb78/10F/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/fa57aad105904ac9910cf70506b16d1d5b978/11/DeveloperExceptionPageMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/fa57aad105904ac9910cf70506b16d1d5b978/11/DeveloperExceptionPageMiddleware.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1yV6M7wiuzgYxxXfoXYoAPhlqu4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -204,6 +194,7 @@
       <workItem from="1633217180109" duration="39000" />
       <workItem from="1633261678462" duration="319000" />
       <workItem from="1633275577281" duration="4809000" />
+      <workItem from="1633380313620" duration="680000" />
     </task>
     <servers />
   </component>
@@ -311,7 +302,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/AuthService.cs</url>
-          <line>52</line>
+          <line>53</line>
           <properties documentPath="C:\yusufaligoksel\DDD\src\DDD\Identity.Infrastructure\Services\Concrete\AuthService.cs" initialLine="50" containingFunctionPresentation="method 'CreateUserTokenAsync'">
             <startOffsets>
               <option value="2094" />
@@ -326,7 +317,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Identity.Infrastructure/Services/Concrete/AuthService.cs</url>
-          <line>54</line>
+          <line>55</line>
           <properties documentPath="C:\yusufaligoksel\DDD\src\DDD\Identity.Infrastructure\Services\Concrete\AuthService.cs" initialLine="52" containingFunctionPresentation="method 'CreateUserTokenAsync'">
             <startOffsets>
               <option value="2254" />
@@ -336,19 +327,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Management.API/Startup.cs</url>
-          <line>44</line>
-          <properties documentPath="C:\yusufaligoksel\DDD\src\DDD\Management.API\Startup.cs" initialLine="44" containingFunctionPresentation="lambda expression inside method 'ConfigureServices'">
-            <startOffsets>
-              <option value="1575" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1653" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Identity.Application/Features/Auth/Commands/CreateClientTokenCommand.cs</url>
@@ -364,21 +342,8 @@
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Identity.API/Controllers/AuthController.cs</url>
-          <line>26</line>
-          <properties documentPath="C:\yusufaligoksel\DDD\src\DDD\Identity.API\Controllers\AuthController.cs" initialLine="26" containingFunctionPresentation="method 'CreateClientToken'">
-            <startOffsets>
-              <option value="850" />
-            </startOffsets>
-            <endOffsets>
-              <option value="851" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Management.API/Controllers/DashboardController.cs</url>
-          <line>25</line>
+          <line>23</line>
           <properties documentPath="C:\yusufaligoksel\DDD\src\DDD\Management.API\Controllers\DashboardController.cs" initialLine="24" containingFunctionPresentation="method 'GetMenu'">
             <startOffsets>
               <option value="742" />

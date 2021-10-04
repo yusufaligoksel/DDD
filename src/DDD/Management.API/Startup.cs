@@ -5,11 +5,13 @@ using System.Threading.Tasks;
 using Management.API.Infrastructure.Middlewares;
 using Management.Domain.Settings;
 using Management.Infrastructure.Services.Concrete;
+using Management.Persistance.Context;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -35,6 +37,13 @@ namespace Management.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Management.API", Version = "v1" });
             });
+
+            #region DataBase
+
+            services.AddDbContextPool<ManagementContext>(
+                options => options.UseMySql(Configuration.GetConnectionString("ManagementDb"), new MySqlServerVersion(new Version(5, 5, 52))));
+
+            #endregion
 
             #region Authentication
             services.AddAuthentication(options =>
