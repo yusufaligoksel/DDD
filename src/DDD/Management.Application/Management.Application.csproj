@@ -4,4 +4,15 @@
         <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="FluentValidation" Version="10.3.3" />
+      <PackageReference Include="MediatR" Version="9.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Identity.Domain\Identity.Domain.csproj" />
+      <ProjectReference Include="..\Management.Domain\Management.Domain.csproj" />
+      <ProjectReference Include="..\Management.Infrastructure\Management.Infrastructure.csproj" />
+    </ItemGroup>
+
 </Project>

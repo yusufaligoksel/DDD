@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Management.API.Infrastructure.Middlewares;
+using Management.Application.Features.Category.Commands.InsertCategoryCommad;
 using Management.Domain.Settings;
+using Management.Infrastructure.Repository;
+using Management.Infrastructure.Services.Abstract;
 using Management.Infrastructure.Services.Concrete;
 using Management.Persistance.Context;
+using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -66,6 +70,18 @@ namespace Management.API
                     ClockSkew = TimeSpan.Zero
                 };
             });
+            #endregion
+            
+            #region ServiceInjection
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped(typeof(IBaseService<>), typeof(BaseService<>));
+            services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IProductService, ProductService>();
+            #endregion
+            
+            #region MediatR
+            services.AddMediatR(typeof(Startup));
+            services.AddMediatR(typeof(InsertCategoryCommand));
             #endregion
         }
 

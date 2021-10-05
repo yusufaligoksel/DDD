@@ -1,0 +1,51 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Threading.Tasks;
+
+namespace Management.Infrastructure.Repository
+{
+    public interface IRepository<TEntity> where TEntity : class
+    {
+        #region GetData
+        IQueryable<TEntity> Table { get; }
+        IQueryable<TEntity> TableNoTracking { get; }
+        TEntity Find(params object[] keyValues);
+        IQueryable<TEntity> GetList();
+        Task<TEntity> FindAsync(params object[] keyValues);
+        Task<TEntity> FindAsync(Expression<Func<TEntity, bool>> filter);
+        IEnumerable<TEntity> GetWhere(Expression<Func<TEntity, bool>> filter);
+        Task<IEnumerable<TEntity>> GetWhereAsync(Expression<Func<TEntity, bool>> filter);
+        #endregion
+        
+        #region Data Action Medhods
+        /// <summary>
+        /// Veri/Verileri Kaydetme
+        /// </summary>
+        /// <param name="entity"></param>
+        TEntity Insert(TEntity entity);
+        Task<TEntity> InsertAsync(TEntity entity);
+        void Insert(IEnumerable<TEntity> entities);
+
+        /// <summary>
+        /// Veri/Verileri Güncelleme
+        /// </summary>
+        /// <param name="entity"></param>
+        TEntity Update(TEntity entity);
+        Task<TEntity> UpdateAsync(TEntity entity);
+        void Update(IEnumerable<TEntity> entities);
+
+        /// <summary>
+        /// Veri/Verileri Silme
+        /// </summary>
+        /// <param name="id"></param>
+        void Delete(object id);
+        Task<int> DeleteAsync(object id);
+        void Delete(TEntity entity);
+        Task<int> DeleteAsync(TEntity entity);
+        void Delete(IEnumerable<TEntity> entities);
+        #endregion
+
+    }
+}

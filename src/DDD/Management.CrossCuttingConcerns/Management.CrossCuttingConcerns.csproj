@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Caching\Microsoft" />
+      <Folder Include="Caching\Redis" />
+      <Folder Include="Logging\ElasticSearch" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="NEST" Version="7.15.0" />
+    </ItemGroup>
+
+</Project>
