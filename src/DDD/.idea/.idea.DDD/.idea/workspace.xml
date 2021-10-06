@@ -12,17 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ea0796f-8a23-4300-913c-49d047f895b6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Management.CrossCuttingConcerns/Logging/ElasticSearch/Abstract/ILogService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Management.CrossCuttingConcerns/Logging/ElasticSearch/Concrete/ElasticSearchLogService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Management.CrossCuttingConcerns/Logging/ElasticSearch/Concrete/QueryOperations.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Management.CrossCuttingConcerns/Logging/ElasticSearch/Extensions/ElasticSearchExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Management.CrossCuttingConcerns/Logging/ElasticSearch/Mapping/LogModelMapping.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Management.Domain/Settings/ElasticSearchOption.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Management.API/Controllers/ElasticSearchTestController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DDD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DDD/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Management.API/Management.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Management.API/Management.API.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Management.API/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Management.API/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Management.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Management.API/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Management.CrossCuttingConcerns/Management.CrossCuttingConcerns.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Management.CrossCuttingConcerns/Management.CrossCuttingConcerns.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,6 +201,7 @@
       <workItem from="1633438671639" duration="1519000" />
       <workItem from="1633471853927" duration="1203000" />
       <workItem from="1633501797506" duration="6888000" />
+      <workItem from="1633535081630" duration="1261000" />
     </task>
     <servers />
   </component>
@@ -419,6 +412,58 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Management.CrossCuttingConcerns/Logging/ElasticSearch/Extensions/ElasticSearchExtensions.cs</url>
+          <line>32</line>
+          <properties documentPath="C:\yusufaligoksel\DDD\src\DDD\Management.CrossCuttingConcerns\Logging\ElasticSearch\Extensions\ElasticSearchExtensions.cs" initialLine="32" containingFunctionPresentation="method 'CreateIndex'">
+            <startOffsets>
+              <option value="1109" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1110" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Management.CrossCuttingConcerns/Logging/ElasticSearch/Extensions/ElasticSearchExtensions.cs</url>
+          <line>14</line>
+          <properties documentPath="C:\yusufaligoksel\DDD\src\DDD\Management.CrossCuttingConcerns\Logging\ElasticSearch\Extensions\ElasticSearchExtensions.cs" initialLine="14" containingFunctionPresentation="method 'AddElasticsearch'">
+            <startOffsets>
+              <option value="511" />
+            </startOffsets>
+            <endOffsets>
+              <option value="512" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Management.API/Controllers/ElasticSearchTestController.cs</url>
+          <line>22</line>
+          <properties documentPath="C:\yusufaligoksel\DDD\src\DDD\Management.API\Controllers\ElasticSearchTestController.cs" initialLine="22" containingFunctionPresentation="method 'Test'">
+            <startOffsets>
+              <option value="618" />
+            </startOffsets>
+            <endOffsets>
+              <option value="619" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Management.CrossCuttingConcerns/Logging/ElasticSearch/Concrete/ElasticSearchLogService.cs</url>
+          <line>49</line>
+          <properties documentPath="C:\yusufaligoksel\DDD\src\DDD\Management.CrossCuttingConcerns\Logging\ElasticSearch\Concrete\ElasticSearchLogService.cs" initialLine="49" containingFunctionPresentation="method 'InsertLog'">
+            <startOffsets>
+              <option value="1747" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1748" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

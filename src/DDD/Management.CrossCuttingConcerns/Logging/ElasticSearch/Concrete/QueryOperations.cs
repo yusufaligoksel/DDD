@@ -13,7 +13,7 @@ namespace Management.CrossCuttingConcerns.Logging.ElasticSearch.Concrete
             };
             
             QueryContainer queryContainer = null;
-            queryContainer&= new BoolQuery { MustNot = new QueryContainer[] { new TermQuery { Field = "LogLevelId", Value = levelId, Boost = 0.0 } } };
+            queryContainer&= new BoolQuery { Must = new QueryContainer[] { new TermQuery { Field = "LogLevelId", Value = levelId, Boost = 0.0 } } };
             sr.Query = queryContainer;
             
             return sr;
