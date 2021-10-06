@@ -19,6 +19,7 @@
     <ItemGroup>
       <ProjectReference Include="..\Identity.Infrastructure\Identity.Infrastructure.csproj" />
       <ProjectReference Include="..\Management.Application\Management.Application.csproj" />
+      <ProjectReference Include="..\Management.CrossCuttingConcerns\Management.CrossCuttingConcerns.csproj" />
       <ProjectReference Include="..\Management.Domain\Management.Domain.csproj" />
       <ProjectReference Include="..\Management.Infrastructure\Management.Infrastructure.csproj" />
       <ProjectReference Include="..\Management.Persistance\Management.Persistance.csproj" />

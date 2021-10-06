@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Management.API.Infrastructure.Middlewares;
 using Management.Application.Features.Category.Commands.InsertCategoryCommad;
+using Management.CrossCuttingConcerns.Logging.ElasticSearch.Extensions;
 using Management.Domain.Settings;
 using Management.Infrastructure.Repository;
 using Management.Infrastructure.Services.Abstract;
@@ -82,6 +83,10 @@ namespace Management.API
             #region MediatR
             services.AddMediatR(typeof(Startup));
             services.AddMediatR(typeof(InsertCategoryCommand));
+            #endregion
+
+            #region ElasticSearch
+            services.AddElasticsearch(Configuration);
             #endregion
         }
 

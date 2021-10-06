@@ -12,26 +12,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ea0796f-8a23-4300-913c-49d047f895b6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Management.API/Controllers/CategoryController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Management.Application/Features/Category/Commands/InsertCategoryCommad/InsertCategoryCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Management.Application/Features/Category/Commands/InsertCategoryCommad/InsertCommandValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Management.Domain/Dto/CategoryDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Management.Infrastructure/Repository/IRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Management.Infrastructure/Repository/Repository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Management.Infrastructure/Services/Abstract/IBaseService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Management.Infrastructure/Services/Abstract/ICategoryService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Management.Infrastructure/Services/Abstract/IProductService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Management.Infrastructure/Services/Concrete/BaseService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Management.Infrastructure/Services/Concrete/CategoryService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Management.Infrastructure/Services/Concrete/ProductService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Management.CrossCuttingConcerns/Logging/ElasticSearch/Abstract/ILogService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Management.CrossCuttingConcerns/Logging/ElasticSearch/Concrete/ElasticSearchLogService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Management.CrossCuttingConcerns/Logging/ElasticSearch/Concrete/QueryOperations.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Management.CrossCuttingConcerns/Logging/ElasticSearch/Extensions/ElasticSearchExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Management.CrossCuttingConcerns/Logging/ElasticSearch/Mapping/LogModelMapping.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Management.Domain/Settings/ElasticSearchOption.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DDD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DDD/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DDD.sln" beforeDir="false" afterPath="$PROJECT_DIR$/DDD.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Management.API/Management.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Management.API/Management.API.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Management.API/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Management.API/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Management.Application/Class1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Management.Application/Management.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Management.Application/Management.Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Management.Domain/Management.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Management.Domain/Management.Domain.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Management.Infrastructure/Management.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Management.Infrastructure/Management.Infrastructure.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Management.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Management.API/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Management.CrossCuttingConcerns/Management.CrossCuttingConcerns.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Management.CrossCuttingConcerns/Management.CrossCuttingConcerns.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,6 +207,8 @@
       <workItem from="1633380313620" duration="680000" />
       <workItem from="1633430172629" duration="3256000" />
       <workItem from="1633438671639" duration="1519000" />
+      <workItem from="1633471853927" duration="1203000" />
+      <workItem from="1633501797506" duration="6888000" />
     </task>
     <servers />
   </component>
