@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Management.CrossCuttingConcerns.Caching.Redis.Abstract;
 using Management.CrossCuttingConcerns.Logging.ElasticSearch.Abstract;
+using Management.Domain.Enums;
 using Management.Domain.Log;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,10 +15,13 @@ namespace Management.API.Controllers
     public class ElasticSearchTestController : ControllerBase
     {
         private readonly ILogService _logService;
+        private readonly IRedisCacheManager _redisCacheManager;
 
-        public ElasticSearchTestController(ILogService logService)
+        public ElasticSearchTestController(ILogService logService,
+            IRedisCacheManager redisCacheManager)
         {
             _logService = logService;
+            _redisCacheManager = redisCacheManager;
         }
 
         [HttpPost]
@@ -41,12 +47,17 @@ namespace Management.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetList()
         {
-            var list = await _logService.GetLogsAsync();
-            return Ok(list);
+            var logList = await _redisCacheManager.Get<IEnumerable<LogModel>>($"management-logs", 2, async () =>
+             {
+                 var list = await _logService.GetLogsAsync();
+                 return list;
+             }, CacheIndex.Default);
+
+            return Ok(logList);
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get([FromQuery]string id)
+        public async Task<IActionResult> Get([FromQuery] string id)
         {
             var log = await _logService.Find(id);
             return Ok(log);

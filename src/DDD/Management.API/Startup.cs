@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Management.API.Infrastructure.Middlewares;
 using Management.Application.Features.Category.Commands.InsertCategoryCommad;
+using Management.CrossCuttingConcerns.Caching.Redis.Abstract;
+using Management.CrossCuttingConcerns.Caching.Redis.Concrete;
 using Management.CrossCuttingConcerns.Logging.ElasticSearch.Abstract;
 using Management.CrossCuttingConcerns.Logging.ElasticSearch.Concrete;
 using Management.CrossCuttingConcerns.Logging.ElasticSearch.Extensions;
@@ -48,6 +50,7 @@ namespace Management.API
             #region Options
             services.Configure<TokenOption>(Configuration.GetSection("TokenOption"));
             services.Configure<ElasticSearchOption>(Configuration.GetSection("ElasticSearch"));
+            services.Configure<RedisConnectionSetting>(Configuration.GetSection("RedisSettings"));
             #endregion
 
             #region DataBase
@@ -86,6 +89,8 @@ namespace Management.API
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<ILogService, ElasticSearchLogService>();
+            services.AddScoped<IRedisCacheManager, RedisCacheManager>();
+            services.AddScoped<ICacheService, RedisCacheService>();
             #endregion
 
             #region MediatR
